@@ -57,6 +57,8 @@ load_Denishenko <- function() {
 	return(Training_5th95th)
 }
 
+## This is weird b/c I was fixing outlier problem
+# Probably makes more sense to rescale to (data-median(data))/(75th quantile - 25th quantile)
 preprocessing <- function(data, probs=c(0.05,0.95)) {
 	for (score in c("prop.intronic", "pct.mt", "pct.ribo", "gene.length", "n.exons")) {
 		# rescale data based on 1st and 99th percentile
