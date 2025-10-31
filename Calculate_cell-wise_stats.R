@@ -167,7 +167,7 @@ if (is.null(is.cell)) {
 
 
 
-predictors <- data.frame(prop.intronic=intronic.prop, pct.mt=pct.mt, pct.ribo=pct.ribo, gene.length=(1-gene_length[,3])/gene_length[,1], intron.length=intron_length,  n.exons=(1-num_exons[,3])/num_exons[,1], is.cell=is.cell)
+predictors <- data.frame(prop.intronic=intronic.prop, pct.mt=pct.mt, pct.ribo=pct.ribo, gene.length=(1-gene_length[,3])/gene_length[,1], intron.length=(1-intron_length[,3])/intron_length[,1],  n.exons=(1-num_exons[,3])/num_exons[,1], is.cell=is.cell)
 
 saveRDS(predictors, paste(prefix, "predictors.rds", sep="_"))
 
